@@ -1,0 +1,27 @@
+version: '3.9'
+
+services:
+  activemq:
+    image: webcenter/activemq
+    restart: always
+    ports:
+      - "8161:8161"
+    environment:
+      - ACTIVEMQ_ADMIN_LOGIN=admin
+      - ACTIVEMQ_ADMIN_PASSWORD=admin
+    container_name: activemq
+
+  hostel-springboot:
+    image: hostel-spring-boot-core
+    restart: always
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - /data/hostel-springboot
+    ports:
+      - "8080:8080"
+    container_name: core
+    depends_on:
+      - activemq
+

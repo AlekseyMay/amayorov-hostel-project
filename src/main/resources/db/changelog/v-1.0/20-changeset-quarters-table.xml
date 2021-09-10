@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+		xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+
+<changeSet id="4" author="amayorov">
+		<sqlFile dbms="h2"
+		         encoding="utf8"
+		         endDelimiter="\nGO"
+		         relativeToChangelogFile="true"
+		         splitStatements="true"
+		         stripComments="true"
+		         path="20-create-quarters-table.sql"
+		/>
+		<rollback>
+			<sqlFile dbms="h2"
+			         encoding="utf8"
+			         endDelimiter="\nGO"
+			         relativeToChangelogFile="true"
+			         splitStatements="true"
+			         stripComments="true"
+			         path="20-drop-quarters-table.sql"/>
+		</rollback>
+	</changeSet>
+</databaseChangeLog>
