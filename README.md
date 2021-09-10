@@ -54,15 +54,15 @@ Every 120 seconds actor shows in console information about all registered users 
 
 It is also possible to use Docker Desktop software to start or stop containers.
 
-Way of proceeding (to test the app):
+**Way of proceeding (to test the app):**
 
-Check Registration. It should work for everybody.
-At start of the application it creates two roles: ADMIN, MANAGER. And these roles are already set up for privileges, just for test purposes you can create additional roles, but in order to achieve functionality, yo have to change the code.
-Log in with default admin User and create a new Admin user. Log out and log in with newly created account.
-Create Categories, at least several from the enum List.
-Create several Quarters.
-Imagine that any guests need particular quarters for particular time, so check the quarters for availability with /quarters/validation, of course at the beginning, when no guests with presence added, it will response the list of all the quarters, meaning that all are free.
-Create several Guests.
-You can try adding additional presence to guests.
-You can check the quarters again on those dates on which you created presence for guests, it will response that there are no free quarters with demanded categories and amount.
-You can try now any other remaining requests. As well as log in as MANAGER to check if the privileges works in accordance with technical assignment.
+1. Check Registration. It should work for everybody.
+2. At start of the application it creates two roles: ADMIN, MANAGER. And these roles are already set up for privileges, just for test purposes you can create additional roles, but in order to achieve functionality, yo have to change the code.
+3. Log in with default admin User and create a new Admin user. Log out and log in with newly created account.
+4. Create Categories, at least several from the enum List.
+5. Create several Quarters.
+6. Imagine that any guests need particular quarters for particular time, so check the quarters for availability with /quarters/validation, of course at the beginning, when no guests with presence added, it will response the list of all the quarters, meaning that all are free.
+7. Create several Guests.
+8. You can try adding additional presence to guests.
+9. You can check the quarters again on those dates on which you created presence for guests, it will response that there are no free quarters with demanded categories and amount.
+10. You can try now any other remaining requests. As well as log in as MANAGER to check if the privileges works in accordance with technical assignment.
