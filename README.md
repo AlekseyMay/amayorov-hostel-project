@@ -1,10 +1,10 @@
-Documentation
+**Documentation**
 
 First of all be attentive while inserting information into requests' fields. As SWAGGER doesn't support dynamically changing documentation of DTO fields for different request (the only way was to use different DTOs for each request). The only option was to use hints which fields to fill and which have to be left unfilled.
 
 At the start of the application the default User with 'username': admin and 'password': admin with 'roles': ADMIN,MANAGER has been created.
 
-Client details:
+**Client details:**
 
 'client_id': my-trusted-client
 
@@ -24,7 +24,7 @@ login: amayorovhostel@gmail.com
 
 password: Hostel111
 
-H2 database info:
+**H2 database info:**
 
 endpoint: http://localhost:8080/h2-console
 
@@ -34,23 +34,24 @@ user name: sa
 
 password:
 
-Caffeine cache implementation:
+**Caffeine cache implementation:**
 
 All the requests are using cache system, setting/cleaning/updating. Cache cleans automatically after 60 min of inactivity.
 
-Akka actors classic simple implementation:
+**Akka actors classic simple implementation:**
 
 Every 120 seconds actor shows in console information about all registered users and about quarters available for the next 7 days.
 
-Docker compose commands:
+**Docker compose commands:**
 
-mvn clean || just once when changes to the code are made
-mvn install || just once when changes to the code are made
-docker-compose build
-docker-compose up OR docker-compose up -d (to run in hidden mode, only in Desktop Docker log will be shown)
-docker-compose stop (to stop the working containers)
-docker-compose down (to stop and delete all the containers)
-docker-compose start (to start exixsting containers) OR docker-compose up
+1. mvn clean || just once when changes to the code are made
+2. mvn install || just once when changes to the code are made
+3. docker-compose build
+4. docker-compose up OR docker-compose up -d (to run in hidden mode, only in Desktop Docker log will be shown)
+5. docker-compose stop (to stop the working containers)
+6. docker-compose down (to stop and delete all the containers)
+7. docker-compose start (to start exixsting containers) OR docker-compose up
+
 It is also possible to use Docker Desktop software to start or stop containers.
 
 Way of proceeding (to test the app):
